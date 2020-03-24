@@ -1,4 +1,8 @@
-# bv2av
+# bv2av - 界面美化版本
 哔哩哔哩BV转AV
 
-PHP菜鸟 如有任何建议欢迎提issue
+原作者：Blokura
+
+https://bv2av.drblack-system.com/
+
+
