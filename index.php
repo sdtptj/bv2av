@@ -3,7 +3,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="Cache-Control" content="no-transform">
     <meta http-equiv="Cache-Control" content="no-siteapp">
-    <meta name="keywords" content="哔哩哔哩,bv,av号,bilibili">
+    <meta name="keywords" content="哔哩哔哩,bv,av号,bilibili,DrBlack,DrBlackの锦里">
     <meta name="description" content="BV转AV">
     <title>BV号转AV号 - DrBlack</title>
     <link href="./css.css" rel="stylesheet" type="text/css">
