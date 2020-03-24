@@ -8,8 +8,8 @@
     <title>BV号转AV号 - DrBlack</title>
     <link href="./css.css" rel="stylesheet" type="text/css">
     <link href="./css2.css" rel="stylesheet" type="text/css">
-    <link href="./flat-ui.css" rel="stylesheet">
-    <link href="./demo.css" rel="stylesheet">
+    <link href="./css/flat-ui.css" rel="stylesheet">
+    <link href="./css/demo.css" rel="stylesheet">
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="https://www.bootcss.com/p/buttons/css/buttons.css" rel="stylesheet">
     <link href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -34,7 +34,7 @@
             text-align: center;
             display: block;
             position: relative;
-            top: 200px;
+            top: 150px;
             vertical-align: middle;
         }
         
@@ -71,7 +71,7 @@
 <body>
     <div class="container">
         <div class="content">
-            <div class="title">BV号转AV号<small> - <a target="_blank" href="https://github.com/Blokura/bv2av">代码引用&借鉴</a> - <a target="_blank" href="https://www.drblack-system.com">DrBlackの锦里</a></small></div>
+            <div class="title">BV号转AV号<small> - <a target="_blank" href="https://github.com/Blokura/bv2av">代码引用</a> - <a target="_blank" href="https://www.drblack-system.com">DrBlackの锦里</a></small></div>
         </div>
         <h3 class="demo-panel-title">请在下方输入视频BV号</h3>
         <div class="row"></div>
@@ -139,7 +139,7 @@ function dec($x){
 	$json = json_decode($output);
 	curl_close($ch);
 	if(is_numeric($json->data->View->aid)){
-		return $x."<br/>↓<br><font size='6' color='red'>av".$numbe."</font><br/><br/><a href='https://www.bilibili.com/video/av".$json->data->View->aid."' target='_blank'><img src='".str_replace("http://","https://",$json->data->View->pic)."' width='192' height='108'></a><br/>".$json->data->View->title."<br/>UP主:<a href='https://space.bilibili.com/".$json->data->View->owner->mid."' target='_blank'>".$json->data->View->owner->name."";
+		return $x."<br><font size='4'>看，我帮你找到啦ヾ(*´▽‘*)<br><font size=''>↓↓↓↓↓↓</br><font size='6' color='red'>av".$numbe."</font><br/><br/><a href='https://www.bilibili.com/video/av".$json->data->View->aid."' target='_blank'><img src='".str_replace("http://","https://",$json->data->View->pic)."' width='192' height='118'></a><br/>".$json->data->View->title."<br/>UP主:<a href='https://space.bilibili.com/".$json->data->View->owner->mid."' target='_blank'>".$json->data->View->owner->name."";
 	}else{
         //return $x.'<br/><font size="5">看，我帮你找到啦ヾ(*´▽‘*)ﾉ<br>↓↓↓↓↓↓</br>
         //<br><font size="5" font color="red"><b>av'.$numbe."</b></font><b>";
