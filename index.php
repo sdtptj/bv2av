@@ -1,28 +1,91 @@
 <html>
 <head>
-	<title>BV号转AV号工具 - 找回视频丢失的AV号</title>
-	<meta name="Keywords" Content="BV号,AV号,B站,哔哩哔哩">
-	<meta name="Description" Content="一个可以将BV号转AV号的小工具">
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<meta name="referrer" content="no-referrer">
-	<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?a64cd95a180806066a7d13a0b531b6d1";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="keywords" content="哔哩哔哩,bv,av号,bilibili">
+    <meta name="description" content="BV转AV">
+    <title>BV号转AV号 - DrBlack</title>
+    <link href="./css.css" rel="stylesheet" type="text/css">
+    <link href="./css2.css" rel="stylesheet" type="text/css">
+    <link href="./css/flat-ui.css" rel="stylesheet">
+    <link href="./css/demo.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="https://www.bootcss.com/p/buttons/css/buttons.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>BV转AV - DrBlack</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            display: table;
+            font-weight: 100;
+            font-family: 'Lato';
+        }
+        
+        .container {
+            text-align: center;
+            display: block;
+            position: relative;
+            top: 200px;
+            vertical-align: middle;
+        }
+        
+        .content {
+            text-align: center;
+            display: inline-block;
+        }
+        
+        .title {
+            font-size: 66px;
+        }
+        
+        .title small {
+            font-size: 33px;
+        }
+        
+        .title a {
+            color: #000;
+            text-decoration: none;
+        }
+        
+        goo {
+            display: block;
+            position: fixed;
+            top: 250px;
+        }
+        goog{
+            display: block;
+            position: fixed;
+            bottom:0px;
+        }
+    </style>
 </head>
 <body>
-	<center>
-		<font size="5"><b>找回哔哩哔哩视频丢失的AV号</b></font><br><br>
-		<form>
-			<input type="text" name="BV" placeholder="BV1......"><button class="button center" id="submit-query">查询</button>
-		</form>
-		<?php
+    <div class="container">
+        <div class="content">
+            <div class="title">BV号转AV号<small> - <a target="_blank" href="https://github.com/Blokura/bv2av">代码引用&借鉴</a> - <a target="_blank" href="https://www.drblack-system.com">DrBlackの锦里</a></small></div>
+        </div>
+        <h3 class="demo-panel-title">请在下方输入视频BV号</h3>
+        <div class="row"></div>
+            <div class="for-group">
+                <div class="goo">
+                    <form>
+                    <input type="text" name="BV" placeholder="输入需要转换的BV号" class="form-control" />
+                    <br>
+                    </br>
+                    <button class = "button center button button-glow button-border button-rounded button-primary" id="submit-query">转换</button>
+                    </form>
+                </div>
+            </div>
+        <?php
 		if (isset($_GET['BV'])){  
 			$str = trim($_GET['BV']);  //清理空格  
 			$str = strip_tags($str);   //过滤html标签  
@@ -38,19 +101,19 @@ var _hmt = _hmt || [];
 				}elseif(strlen($str) == 10){
 					echo dec('BV'.$str);
 				}else{
-					echo "<font size='4' color='red'>".$str."查询的不是一个正确的BV号</font>";
+					echo "<font size='4' color='red'>".$str."←错误信息 哼唧，怎么能输入错误的BV号捏((٩(//̀Д/́/)۶))</font>";
 				}
 			}else{
 				echo dec($bv);
 			}
-			echo "<br/><br/><font color='grey' size='2'><a href='https://github.com/Blokura/bv2av' target='_blank'>github</a></font><br><font size='1' color='grey'>已支持www.bilibili.bv2av.com/video/BV1XJ41157tQ方式查询<br>(在B站链接中加入bv2av就可以查询啦)</font>";
-		}else{
-			echo "<font color='grey' size='2'>本地解密转换</font> <a href='https://www.zhihu.com/question/381784377/answer/1099438784' target='_blank'>算法</a><br><br/><font size='1' color='grey'>支持www.bilibili.bv2av.com/video/BV1XJ41157tQ方式查询(在链接中加入bv2av就可以查询啦)</font><br/><b>强烈谴责某些小人DDOS和QQ举报危险域名<br>本网站不含任何广告以及违法内容，也没有任何信息收集，请自便</b><br/><br/><font size='4'><b>更多功能</b></font><br>查询用户信息和粉丝勋章：<a href='http://nbtester.com/breeze/user.t' target='_blank'>nbtester</a><br>查询用户直播中奖记录：<a href='https://www.madliar.com/bili/raffles' target='_blank'>madliar</a><br><br><font color='grey' size='2'><a href='https://github.com/Blokura/bv2av' target='_blank'>github</a></font>";
 		}
 		?>
-	</center>
 </body>
+<phppp>
 <?php
+//源代码来自Github Blokura/bv2av
+//此代码为fork贡献修改，修改者Dr_Black
+//转载代码请fork原版仓库，并在自己的版本中标注修改者以及原作者，顺便star一下吧2333
 function dec($x){
 	$table = 'fZodR9XQDSUm21yCkr6zBqiveYah8bt4xsWpHnJE7jL5VG3guMTKNPAwcF';
 	$tr = array();
@@ -66,8 +129,8 @@ function dec($x){
 		$r += $tr[$x[$s[$i]]]*pow(58,$i);
 	}
 	$numbe = $r-$add^$xor;
-	if($numbe <=0 )return "<font size='4' color='red'>".$numbe."查询的不是一个正确的BV号</font>";
-	if($numbe > 10000000000)return "<font size='4' color='red'>".$numbe."查询的不是一个正确的BV号</font>";
+	if($numbe <=0 )return "<font size='5' color='red'>".$numbe." 哼唧，怎么能输入错误的BV号捏((٩(//̀Д/́/)۶))</font>";
+	if($numbe > 10000000000)return "<font size='5' color='red'>".$numbe." 查询的不是一个正确的BV号((٩(//̀Д/́/)۶))</font>";
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL, 'https://api.bilibili.com/x/web-interface/view/detail?bvid='.$x);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -76,9 +139,21 @@ function dec($x){
 	$json = json_decode($output);
 	curl_close($ch);
 	if(is_numeric($json->data->View->aid)){
-		return $x."<br/>↓<br><font size='4' color='red'>av".$numbe."</font><br/><br/><a href='https://www.bilibili.com/video/av".$json->data->View->aid."' target='_blank'><img src='".str_replace("http://","https://",$json->data->View->pic)."' width='192' height='108'></a><br/>".$json->data->View->title."<br/>UP主:<a href='https://space.bilibili.com/".$json->data->View->owner->mid."' target='_blank'>".$json->data->View->owner->name."";
+		return $x."<br/>↓<br><font size='6' color='red'>av".$numbe."</font><br/><br/><a href='https://www.bilibili.com/video/av".$json->data->View->aid."' target='_blank'><img src='".str_replace("http://","https://",$json->data->View->pic)."' width='192' height='108'></a><br/>".$json->data->View->title."<br/>UP主:<a href='https://space.bilibili.com/".$json->data->View->owner->mid."' target='_blank'>".$json->data->View->owner->name."";
 	}else{
-		return $x.'<br/>↓<br><font color="red"><b>av'.$numbe."</b></font>";
+        //return $x.'<br/><font size="5">看，我帮你找到啦ヾ(*´▽‘*)ﾉ<br>↓↓↓↓↓↓</br>
+        //<br><font size="5" font color="red"><b>av'.$numbe."</b></font><b>";
+        return $x.'<br/><font size="5">看，我帮你找到啦ヾ(*´▽‘*)ﾉ<br>↓↓↓↓↓↓</br>
+        <br><font size="5" font color="red">av'.$numbe.'<br><br><a target="_blank" class="button button-3d button-primary button-rounded" href=https://www.bilibili.com/video/av'.$numbe.">点击跳转</a></b></font>";
 	}
 }
 ?>
+</phppp>
+<div class = "goog">
+    <br>
+    <br>
+    <br>
+	<p><a href="https://www.drblack-system.com/index.php/bv2av/">关于</a></p>
+      <p>DrBlackの锦里 -  <span>胸に刻まれる あなたとの日々よ</span></p>
+      <p> 2020 Copyrights - All Rights Reserved 粤ICP备18107693号</p>
+</div>
